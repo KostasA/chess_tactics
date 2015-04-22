@@ -2,6 +2,7 @@ package com.anast.kostasa.chess_tactics;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -30,6 +31,8 @@ public class MainBoard extends Activity implements View.OnClickListener {
         image = (ImageView) findViewById(R.id.iv1);
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
+        Typeface font = Typeface.createFromAsset(getAssets(),"National Cartoon.ttf");
+        btn1.setTypeface(font);
         btn1.startAnimation(AnimationUtils.loadAnimation(this,R.anim.rotation));
 
         image.setImageResource(R.drawable.cp1);
